@@ -128,13 +128,13 @@ def main():
     # create dataloader
     print("create dataloaders")
     train_dataloader = eval("{}DataLoader".format(config.dataset))(
-                    data_dir=os.path.join(config.data_dir, config.dataset),
+                    data_dir=os.path.join(config.data_dir),
                     image_size=config.image_size,
                     batch_size=config.batch_size,
                     num_workers=config.num_workers,
                     split='train')
     valid_dataloader = eval("{}DataLoader".format(config.dataset))(
-                    data_dir=os.path.join(config.data_dir, config.dataset),
+                    data_dir=os.path.join(config.data_dir),
                     image_size=config.image_size,
                     batch_size=config.batch_size,
                     num_workers=config.num_workers,
